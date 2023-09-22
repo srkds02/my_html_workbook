@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get Method</title>
+</head>
+<body>
+    <h1>GET Method</h1>
+    <p>Click the button below:</p>
+    <form action="/action_page.php" method="get">
+	<label for="query">Search:</label>
+        <input type="text" name="Name" value="Name">
+	<input type="text" name="Surname" value="Surname">
+        <input type="number" name="Age" value="0">
+	<input type="number" name="ID" value="0">
+	<input type="text" name="Faculty" value="Faculty">
+        <input type="submit" value="Get Request">
+    </form>
+POST /echo/post/json HTTP/1.1
+Host: reqbin.com
+
+{
+  "Name": "Sergey",
+  "Surname": "Krasuckis",
+  "Age": 20,
+  "ID": 78480,
+  "Faculty": "TSI"
+}
+</body>
+</html>
