@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Get Method</title>
+    <title>WorkBook</title>
 </head>
 <body>
-    <h1>GET Method</h1>
+    <h1>Video</h1>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     <h2>Rick Astley - Never Gonna Give You Up (Official Music Video)</h2>
+	<h1>Get method</h1>
     <p>Click the button below:</p>
     <form action="/action_page.php" method="get">
 	<label for="query">Search:</label>
@@ -19,7 +20,6 @@
     </form>
 POST /echo/post/json HTTP/1.1
 Host: reqbin.com
-
 {
   "Name": "Sergey",
   "Surname": "Krasuckis",
@@ -27,5 +27,26 @@ Host: reqbin.com
   "ID": 78480,
   "Faculty": "TSI"
 }
+	<h1>Geolocation Example</h1>
+    <button onclick="getLocation()">Geolocation</button>
+
+<p id="try"></p>
+
+<script>
+var x = document.getElementById("try");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 </body>
 </html>
